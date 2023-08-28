@@ -3,8 +3,8 @@ import { BsDot } from 'react-icons/bs';
 import { useState, useEffect } from 'react';
 import { ThreeDots } from "react-loader-spinner";
 import axios from 'axios';
-// const apiKey = import.meta.env.VITE_REACT_APP_NewsApi;
-const apiKey = '404ddb67366240cf8005e18c52c7fc1b';
+const apiKey = import.meta.env.VITE_REACT_APP_NewsApi;
+
 const API = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
 function cardsB() {
   const [news, setNews] = useState([]);
