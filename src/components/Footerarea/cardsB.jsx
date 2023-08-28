@@ -13,8 +13,6 @@ function cardsB() {
   const [isError, setIsError] = useState(false);
   const [loading, setLoading] = useState(false);
 
-
-
   const getNewsData = async () => {
     try {
       setLoading(true);
@@ -50,7 +48,7 @@ function cardsB() {
           news?.map((val, e) => {
             return (
               < div key={e} className='bg-white rounded-xl p-2 w-full md:w-[29rem] h-52 md:h-52'>
-                <div><h1>{calculateDaysAgo(val.publishedAt) + " Day ago"}</h1></div>
+                <div><h1>{calculateDaysAgo(val.publishedAt)+" Day ago"}</h1></div>
                 <div className='flex flew-col'>
                   <div className='flex flex-col'>
                     <Link to={val.url}>
