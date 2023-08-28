@@ -4,7 +4,8 @@ import { PiBookmarkSimpleDuotone } from 'react-icons/pi';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ThreeDots } from "react-loader-spinner";
-const apiKey = import.meta.env.VITE_REACT_APP_NewsApi;
+// const apiKey = import.meta.env.VITE_REACT_APP_NewsApi;
+const apiKey = '404ddb67366240cf8005e18c52c7fc1b';
 
 const API = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
 

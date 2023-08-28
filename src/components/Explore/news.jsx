@@ -5,7 +5,8 @@ import { useState, useEffect } from 'react';
 import { FcBookmark } from 'react-icons/fc';
 import axios from 'axios';
 import { ThreeDots } from "react-loader-spinner";
-const apiKey = import.meta.env.VITE_REACT_APP_NewsApi;
+// const apiKey = import.meta.env.VITE_REACT_APP_NewsApi;
+const apiKey = '404ddb67366240cf8005e18c52c7fc1b';
 const API = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${apiKey}`
 
 function news() {
