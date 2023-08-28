@@ -27,9 +27,13 @@
 
 ## Vite commands
 <p> press r to restart the server</p>
+
   <p>press u to show server url</p>
+  
   <p>press o to open in browser</p>
+  
   <p>press c to clear console</p>
+  
   <p>press q to quit</p>
 
 
