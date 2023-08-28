@@ -4,14 +4,14 @@
 <p>First fork and  create clone of the repo</p>
 
 ```bash
-  git clone [https://github.com/arup1221/flask-mongo-api.git](https://github.com/arup1221/News_app.git)
+  git clone https://github.com/arup1221/News_app.git
 ```
 <p>Go to the Directory in your code editor and then Create virtual environment</p>
 
 ```bash
   cd News_app
 ```
-<p>Install node modules(Before it check nodejs is downloaded or not, if not then need to install nodejs )</p>
+<p>Install node modules and update package.json(Before it check nodejs is downloaded or not, if not then need to install nodejs )</p>
 
 ```bash
   npm i
