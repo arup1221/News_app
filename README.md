@@ -19,12 +19,13 @@
 
 <p>Create a .env file into the root directory and there the api key need to put</p>
 <p>Then run the Vite React app using below comman in terminal</p>
+
 ```bash
   npm run dev
 ```
 <p>For quit the server press  'q' or ctrl+c / cmd+c </p>
 
-####Vite commands
+#### Vite commands
 <p> press r to restart the server
   press u to show server url
   press o to open in browser
