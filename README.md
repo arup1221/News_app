@@ -17,7 +17,7 @@
   npm i
 ```
 
-<p>Create a .env file into the root directory and there the api key need to put</p>
+<p> If the .env file is not there then Only Create a .env file into the root directory and there the api key need to put</p>
 <p>Then run the Vite React app using below comman in terminal</p>
 
 ```bash
