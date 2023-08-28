@@ -11,7 +11,7 @@ function App() {
         <Router>
 
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route exact path="/news" element={<News />} />
           </Routes>
           {/* {location.pathname !== '/news' && (

@@ -1,8 +1,10 @@
 import React from 'react'
 import { BsDot } from 'react-icons/bs';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { ThreeDots } from "react-loader-spinner";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import { calculateDaysAgo } from '../../constant/constants';
 const apiKey = import.meta.env.VITE_REACT_APP_NewsApi;
 
 const API = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
@@ -24,23 +26,36 @@ function cardsB() {
       setIsError(error.message);
     }
   };
+  const memoizedGetNewsData = useMemo(() =>
+    getNewsData, []
+  )
   useEffect(() => {
-    getNewsData();
-  }, [])
+    memoizedGetNewsData();
+  }, [memoizedGetNewsData])
+
+  if (loading) {
+    return <div><div className="w-full flex justify-center items-center h-96"><ThreeDots height={40} color="black" /></div></div>;
+  }
+
+  if (isError) {
+    return <div>Error: {isError}</div>;
+  }
 
   return (
     <>
       <div className='flex flex-wrap gap-2'>
         {isError !== "" && <h1 className='font-bold text-2xl'>{isError}</h1>}
 
-        {loading ? <div className="w-full flex justify-center items-center h-96"><ThreeDots height={40} color="black" /></div> :
+        {
           news?.map((val, e) => {
             return (
-              < div key={e} className='bg-white rounded-xl p-2 w-full md:w-[29rem] h-48 md:h-48'>
+              < div key={e} className='bg-white rounded-xl p-2 w-full md:w-[29rem] h-52 md:h-52'>
+                <div><h1>{calculateDaysAgo(val.publishedAt) + " Day ago"}</h1></div>
                 <div className='flex flew-col'>
                   <div className='flex flex-col'>
-                    <h1 className='font-bold text-md'>{val.title}</h1>
-
+                    <Link to={val.url}>
+                      <h1 className='font-bold text-md'>{val.title}</h1>
+                    </Link>
                     <div className="w-48 h-[4rem] overflow-hidden">
                       <div className="text-sm text-gray-500" style={{ WebkitLineClamp: 3 }}>
                         {val.description}
@@ -53,7 +68,7 @@ function cardsB() {
                 </div>
                 <div className='flex flex-row mt-1 gap-x-1 text-sm text-gray-500 items-end'>
                   <h1 className='text-pink-200'>{val.author} </h1>
-                  <BsDot className='mt-1' />
+                  <BsDot />
                   <h1>{val.source.name}</h1>
                 </div>
               </div>
