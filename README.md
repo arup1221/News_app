@@ -1,8 +1,37 @@
-# React + Vite
+# Zintlr News Application React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+<p>First fork and  create clone of the repo</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+  git clone [https://github.com/arup1221/flask-mongo-api.git](https://github.com/arup1221/News_app.git)
+```
+<p>Go to the Directory in your code editor and then Create virtual environment</p>
+
+```bash
+  cd News_app
+```
+<p>Install node modules(Before it check nodejs is downloaded or not, if not then need to install nodejs )</p>
+
+```bash
+  npm i
+```
+
+<p>Create a .env file into the root directory and there the api key need to put</p>
+<p>Then run the Vite React app using below comman in terminal</p>
+```bash
+  npm run dev
+```
+<p>For quit the server press  'q' or ctrl+c / cmd+c </p>
+
+####Vite commands
+<p> press r to restart the server
+  press u to show server url
+  press o to open in browser
+  press c to clear console
+  press q to quit</p>
+
+
+
+
+
