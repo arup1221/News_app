@@ -52,7 +52,7 @@
 
 
 
-<img width="146" alt="Screenshot 2023-08-28 at 9.52.17 PM.png" src="https://github.com/arup1221/News_app/blob/master/src/assets/Screenshot%202023-08-28%20at%209.52.17%20PM.png">
+<img width="190" alt="Screenshot 2023-08-28 at 9.52.17 PM.png" src="https://github.com/arup1221/News_app/blob/master/src/assets/Screenshot%202023-08-28%20at%209.52.17%20PM.png">
 
-<img width="146" alt="Screenshot 2023-08-28 at 9.52.30 PM.png" src="https://github.com/arup1221/News_app/blob/master/src/assets/Screenshot%202023-08-28%20at%209.52.30%20PM.png">
+<img width="190" alt="Screenshot 2023-08-28 at 9.52.30 PM.png" src="https://github.com/arup1221/News_app/blob/master/src/assets/Screenshot%202023-08-28%20at%209.52.30%20PM.png">
 
