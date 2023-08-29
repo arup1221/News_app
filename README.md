@@ -1,7 +1,7 @@
 # Zintlr News Application React + Vite
 
 
-<p>First fork and  create clone of the repo</p>
+<p>Create clone of the repo</p>
 
 ```bash
   git clone https://github.com/arup1221/News_app.git
