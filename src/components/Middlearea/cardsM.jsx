@@ -6,10 +6,8 @@ import axios from 'axios';
 import { ThreeDots } from "react-loader-spinner";
 import { Link } from 'react-router-dom';
 import { calculateHoursAgo } from '../../constant/constants';
-const apiKey = import.meta.env.VITE_REACT_APP_NewsApi;
+import { APIus } from '../../constant/constants';
 
-
-const API = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
 
 function cardsM() {
   const [news, setNews] = useState([]);
@@ -21,7 +19,7 @@ function cardsM() {
   const getNewsData = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`${API}`);
+      const res = await axios.get(`${APIus}`);
       console.log(res.data.articles)
       setNews(res.data.articles);
       setLoading(false);

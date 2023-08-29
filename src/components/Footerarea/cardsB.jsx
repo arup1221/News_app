@@ -5,9 +5,10 @@ import { ThreeDots } from "react-loader-spinner";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { calculateDaysAgo } from '../../constant/constants';
-const apiKey = import.meta.env.VITE_REACT_APP_NewsApi;
+import { APIin } from '../../constant/constants';
 
-const API = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
+
+
 function cardsB() {
   const [news, setNews] = useState([]);
   const [isError, setIsError] = useState(false);
@@ -16,7 +17,7 @@ function cardsB() {
   const getNewsData = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`${API}`);
+      const res = await axios.get(`${APIin}`);
       console.log(res.data.articles)
       setNews(res.data.articles);
       setLoading(false);
@@ -47,8 +48,8 @@ function cardsB() {
         {
           news?.map((val, e) => {
             return (
-              < div key={e} className='bg-white rounded-xl p-2 w-full md:w-[29rem] h-52 md:h-52'>
-                <div><h1>{calculateDaysAgo(val.publishedAt)+" Day ago"}</h1></div>
+              < div key={e} className='bg-white rounded-xl p-2 w-full md:w-[29rem] h-full md:h-52'>
+                <div><h1>{calculateDaysAgo(val.publishedAt) + " Day ago"}</h1></div>
                 <div className='flex flew-col'>
                   <div className='flex flex-col'>
                     <Link to={val.url}>
@@ -64,7 +65,7 @@ function cardsB() {
                     <img src={val.urlToImage} alt="No Image" className='w-72 h-36 md:w-56 md:h-32 rounded-md ' />
                   </div>
                 </div>
-                <div className='flex flex-row mt-1 gap-x-1 text-sm text-gray-500 items-end'>
+                <div className='flex flex-row gap-x-1 text-sm text-gray-500 items-end'>
                   <h1 className='text-pink-200'>{val.author} </h1>
                   <BsDot />
                   <h1>{val.source.name}</h1>

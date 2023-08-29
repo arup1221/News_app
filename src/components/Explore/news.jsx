@@ -7,9 +7,7 @@ import axios from 'axios';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { ThreeDots } from "react-loader-spinner";
 import { calculateHoursAgo } from '../../constant/constants';
-const apiKey = import.meta.env.VITE_REACT_APP_NewsApi;
-
-const API = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${apiKey}`
+import { APIin } from '../../constant/constants';
 
 
 function news() {
@@ -21,7 +19,7 @@ function news() {
   const getNewsData = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`${API}`);
+      const res = await axios.get(`${APIin}`);
       console.log(res.data.articles)
       setNews(res.data.articles);
       setLoading(false);
@@ -58,13 +56,19 @@ function news() {
                   alt="No image"
                   className='w-full h-full object-cover absolute top-0 left-0'
                 />
-                <div className='absolute text-white flex flex-row mt-2 '>
+                <div>
+                  <div className='absolute text-white flex flex-row mt-2 '>
 
-                  <Link to="/">
-                    <IoMdArrowRoundBack className='text-4xl gap-x-4' />
-                  </Link>
+                    <Link to="/">
+                      <IoMdArrowRoundBack className='text-4xl gap-x-4' />
+                    </Link>
 
-                  <button className='ml-4 text-black bg-white p-2 rounded-2xl '>{val.source.name}</button>
+                    <button className='ml-4 text-black bg-white hover:bg-black p-2 rounded-2xl '>{val.source.name}</button>
+
+                  </div>
+
+
+
                 </div>
                 <div className='absolute inset-0 flex flex-col justify-end p-4 bg-black bg-opacity-50 text-white'>
                   <h1>{calculateHoursAgo(val.publishedAt) + " Hours ago"}</h1>

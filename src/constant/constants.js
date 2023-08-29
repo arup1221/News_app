@@ -18,3 +18,9 @@ export function calculateHoursAgo(publishedAt) {
   
     return hoursAgo;
   }
+  
+  export const apiKey = import.meta.env.VITE_REACT_APP_NewsApi;
+
+  export const APIus = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+  export const APIin = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${apiKey}`
+
