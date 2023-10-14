@@ -6,7 +6,7 @@ function header() {
     <>
       <div className='static header top-0 text-4xl flex justify-between text-slate-900 font-black p-3 border-b-2 border-grey-500 '>
         <GiHamburgerMenu />
-        <h1 className='font-bacasime'>Zintlr News</h1>
+        <h1 className='font-bacasime'>My News App</h1>
         <BiSearch />
       </div>
     </>

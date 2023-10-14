@@ -2,7 +2,7 @@ import Home from "./components/home";
 // import Explore from "./components/Explore/explore";
 import News from "./components/Explore/news";
 import Explrbtn from "./components/explrbtn";
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (

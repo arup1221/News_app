@@ -1,15 +1,12 @@
-import React from 'react'
+import { useEffect, useState, useMemo } from 'react';
 import { BsDot } from 'react-icons/bs';
-import { useState, useEffect, useMemo } from 'react';
 import { ThreeDots } from "react-loader-spinner";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { calculateDaysAgo } from '../../constant/constants';
 import { APIin } from '../../constant/constants';
 
-
-
-function cardsB() {
+function CardsB() {
   const [news, setNews] = useState([]);
   const [isError, setIsError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -25,12 +22,12 @@ function cardsB() {
       setIsError(error.message);
     }
   };
-  const memoizedGetNewsData = useMemo(() =>
-    getNewsData, []
-  )
+
+  const memoizedGetNewsData = useMemo(() => getNewsData, []);
+
   useEffect(() => {
     memoizedGetNewsData();
-  }, [memoizedGetNewsData])
+  }, [memoizedGetNewsData]);
 
   if (loading) {
     return <div><div className="w-full flex justify-center items-center h-96"><ThreeDots height={40} color="black" /></div></div>;
@@ -81,4 +78,4 @@ function cardsB() {
   )
 }
 
-export default cardsB
+export default CardsB;
