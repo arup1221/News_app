@@ -1,6 +1,5 @@
-import React from 'react'
+
 import { BsDot } from 'react-icons/bs';
-import { PiBookmarkSimpleDuotone } from 'react-icons/pi';
 import { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
 import { ThreeDots } from "react-loader-spinner";

@@ -22,7 +22,12 @@
   npm i axios react-multi-carousel react-responsive-carousel react-router-dom react-icons
 ```
 
-<p> If the .env file is not there then Only Create a .env file into the root directory and there the api key need to put</p>
+<p> If the .env file is not there then Only Create a .env file into the root directory and put the bellow code in .env file</p>
+
+```bash
+  VITE_REACT_APP_NewsApi = '404ddb67366240cf8005e18c52c7fc1b'
+```
+
 <p>Then run the Vite React app using below comman in terminal</p>
 
 ```bash
