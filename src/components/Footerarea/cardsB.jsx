@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from 'react';
 import { BsDot } from 'react-icons/bs';
-import { ThreeDots } from "react-loader-spinner";
+import { ThreeDots } from 'react-loader-spinner';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { calculateDaysAgo } from '../../constant/constants';
